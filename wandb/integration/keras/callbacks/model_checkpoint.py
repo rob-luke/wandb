@@ -99,7 +99,7 @@ class WandbModelCheckpoint(callbacks.ModelCheckpoint):
             save_weights_only=save_weights_only,
             mode=mode,
             save_freq=save_freq,
-            options=options,
+            # options=options,  # https://github.com/wandb/wandb/issues/7710 rluke
             initial_value_threshold=initial_value_threshold,
             **kwargs,
         )
